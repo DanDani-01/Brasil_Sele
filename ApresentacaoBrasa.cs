@@ -152,6 +152,9 @@ namespace Selecao_Brasa_POO
             btnMeia2.BringToFront();
             btnAtac1.BringToFront();
             btnAtac2.BringToFront();
+
+            InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void BtnGol_Click(object sender, EventArgs e)

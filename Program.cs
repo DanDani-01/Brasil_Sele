@@ -14,6 +14,7 @@ namespace Selecao_Brasa_POO
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ApresentacaoBrasa());
+
         }
     }
 }
