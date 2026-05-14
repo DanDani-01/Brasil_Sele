@@ -21,6 +21,7 @@ namespace Selecao_Brasa_POO
         Jogadores jogador9 = new Jogadores();
         Jogadores jogador10 = new Jogadores();
         Jogadores jogador11 = new Jogadores();
+        Jogadores jogador12 = new Jogadores();
 
         PictureBox img = new PictureBox();
         PictureBox img2 = new PictureBox();
@@ -103,6 +104,14 @@ namespace Selecao_Brasa_POO
             btnPont1.Click += BtnPont_Click;
             btnPont2.Click += BtnPont_Click;
 
+            btnAtac1.Text = "ATACANTE!";
+            btnAtac1.Size = new Size(80, 25);
+            btnAtac1.Location = new Point(170, 280);
+            btnAtac2.Text = "ATACANTE!";
+            btnAtac2.Size = new Size(80, 25);
+            btnAtac2.Location = new Point(310, 280);
+            btnAtac1.Click += BtnAtac_Click;
+            btnAtac2.Click += BtnAtac_Click;
 
 
             try
@@ -152,35 +161,67 @@ namespace Selecao_Brasa_POO
             jogador1.Numero = 1;
             jogador1.Time = "Liverpool";
             jogador1.Idade = 30;
+            jogador12.Nome = "Hugo Lloris";
+            jogador12.Posicao = "Goleiro";
+            jogador12.Numero = 1;
+            jogador12.Time = "Corinthians";
+            jogador12.Idade = 37;
 
             lblNom.Text = "Nome: " + jogador1.Nome;
             lblPos.Text = "Posição: " + jogador1.Posicao;
             lblNum.Text = "Número: " + jogador1.Numero;
             lblTim.Text = "Time: " + jogador1.Time;
             lblIda.Text = "Idade: " + jogador1.Idade;
+            lblNom2.Text = "Nome: " + jogador12.Nome;
+            lblPos2.Text = "Posição: " + jogador12.Posicao;
+            lblNum2.Text = "Número: " + jogador12.Numero;
+            lblTim2.Text = "Time: " + jogador12.Time;
+            lblIda2.Text = "Idade: " + jogador12.Idade;
+
+
 
             img2.Image = Image.FromFile(@"C:\Users\danyb\source\repos\Selecao_Brasa_POO\img\alisson.jpg");
             img2.SizeMode = PictureBoxSizeMode.StretchImage;
             img2.Size = new Size(200, 275);
+            img3.Image = Image.FromFile(@"C:\Users\danyb\Source\Repos\Brasil_Sele\img\hugo.jpg");
+            img3.SizeMode = PictureBoxSizeMode.StretchImage;
+            img3.Size = new Size(200, 275);
 
             this.img2.Location = new Point(550, 120);
+            this.img3.Location = new Point(850, 120);
             lblNom.Location = new Point(545, 400);
             lblPos.Location = new Point(545, 430);
             lblNum.Location = new Point(545, 460);
             lblTim.Location = new Point(545, 490);
             lblIda.Location = new Point(545, 520);
+            lblNom2.Location = new Point(845, 400);
+            lblPos2.Location = new Point(845, 430);
+            lblNum2.Location = new Point(845, 460);
+            lblTim2.Location = new Point(845, 490);
+            lblIda2.Location = new Point(845, 520);
 
             lblNom.Font = new Font("Arial", 16, FontStyle.Bold);
             lblPos.Font = new Font("Arial", 16, FontStyle.Bold);
             lblNum.Font = new Font("Arial", 16, FontStyle.Bold);
             lblTim.Font = new Font("Arial", 16, FontStyle.Bold);
             lblIda.Font = new Font("Arial", 16, FontStyle.Bold);
+            lblNom2.Font = new Font("Arial", 16, FontStyle.Bold);
+            lblPos2.Font = new Font("Arial", 16, FontStyle.Bold);
+            lblNum2.Font = new Font("Arial", 16, FontStyle.Bold);
+            lblTim2.Font = new Font("Arial", 16, FontStyle.Bold);
+            lblIda2.Font = new Font("Arial", 16, FontStyle.Bold);
 
             lblNom.AutoSize = true;
             lblPos.AutoSize = true;
             lblNum.AutoSize = true;
             lblTim.AutoSize = true;
             lblIda.AutoSize = true;
+            lblNom2.AutoSize = true;
+            lblPos2.AutoSize = true;
+            lblNum2.AutoSize = true;
+            lblTim2.AutoSize = true;
+            lblIda2.AutoSize = true;
+
 
 
         }
@@ -454,6 +495,91 @@ namespace Selecao_Brasa_POO
             lblNum2.AutoSize = true;
             lblTim2.AutoSize = true;
             lblIda2.AutoSize = true;
+
+        }
+
+        public void BtnAtac_Click(object sender, EventArgs e)
+        {
+            jogador10.Nome = "Richarlison";
+            jogador10.Posicao = "Atacante";
+            jogador10.Numero = 9;
+            jogador10.Time = "Tottenham";
+            jogador10.Idade = 30;
+            jogador11.Nome = "Vinicius Jr.";
+            jogador11.Posicao = "Atacante";
+            jogador11.Numero = 9;
+            jogador11.Time = "Real Madrid";
+            jogador11.Idade = 28;
+
+            lblNom.Text = "Nome: " + jogador10.Nome;
+            lblPos.Text = "Posição: " + jogador10.Posicao;
+            lblNum.Text = "Número: " + jogador10.Numero;
+            lblTim.Text = "Time: " + jogador10.Time;
+            lblIda.Text = "Idade: " + jogador10.Idade;
+            lblNom2.Text = "Nome: " + jogador11.Nome;
+            lblPos2.Text = "Posição: " + jogador11.Posicao;
+            lblNum2.Text = "Número: " + jogador11.Numero;
+            lblTim2.Text = "Time: " + jogador11.Time;
+            lblIda2.Text = "Idade: " + jogador11.Idade;
+
+            img2.Image = Image.FromFile(@"C:\Users\danyb\Source\Repos\Brasil_Sele\img\richarlison.jpg");
+            img2.SizeMode = PictureBoxSizeMode.StretchImage;
+            img2.Size = new Size(200, 275);
+            this.img2.Location = new Point(550, 120);
+            img3.Image = Image.FromFile(@"C:\Users\danyb\Source\Repos\Brasil_Sele\img\vinicius.jpg");
+            img3.SizeMode = PictureBoxSizeMode.StretchImage;
+            img3.Size = new Size(200, 275);
+            this.img3.Location = new Point(850, 120);
+
+            lblNom.Location = new Point(545, 400);
+            lblPos.Location = new Point(545, 430);
+            lblNum.Location = new Point(545, 460);
+            lblTim.Location = new Point(545, 490);
+            lblIda.Location = new Point(545, 520);
+            lblNom2.Location = new Point(845, 400);
+            lblPos2.Location = new Point(845, 430);
+            lblNum2.Location = new Point(845, 460);
+            lblTim2.Location = new Point(845, 490);
+            lblIda2.Location = new Point(845, 520);
+
+            lblNom.Font = new Font("Arial", 16, FontStyle.Bold);
+            lblPos.Font = new Font("Arial", 16, FontStyle.Bold);
+            lblNum.Font = new Font("Arial", 16, FontStyle.Bold);
+            lblTim.Font = new Font("Arial", 16, FontStyle.Bold);
+            lblIda.Font = new Font("Arial", 16, FontStyle.Bold);
+            lblNom2.Font = new Font("Arial", 16, FontStyle.Bold);
+            lblPos2.Font = new Font("Arial", 16, FontStyle.Bold);
+            lblNum2.Font = new Font("Arial", 16, FontStyle.Bold);
+            lblTim2.Font = new Font("Arial", 16, FontStyle.Bold);
+            lblIda2.Font = new Font("Arial", 16, FontStyle.Bold);
+
+            lblNom.AutoSize = true;
+            lblPos.AutoSize = true;
+            lblNum.AutoSize = true;
+            lblTim.AutoSize = true;
+            lblIda.AutoSize = true;
+            lblNom2.AutoSize = true;
+            lblPos2.AutoSize = true;
+            lblNum2.AutoSize = true;
+            lblTim2.AutoSize = true;
+            lblIda2.AutoSize = true;
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // ApresentacaoBrasa
+            // 
+            this.ClientSize = new System.Drawing.Size(278, 244);
+            this.Name = "ApresentacaoBrasa";
+            this.Load += new System.EventHandler(this.ApresentacaoBrasa_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        private void ApresentacaoBrasa_Load(object sender, EventArgs e)
+        {
 
         }
     }

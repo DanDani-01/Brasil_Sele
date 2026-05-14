@@ -58,7 +58,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="ApresentacaoBrasa.resx">
+      <DependentUpon>ApresentacaoBrasa.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="img\alex.jpg" />
     <Content Include="img\alisson.jpg" />
@@ -66,10 +70,13 @@
     <Content Include="img\campo.jpg" />
     <Content Include="img\casemiro.jpg" />
     <Content Include="img\danilo.jpg" />
+    <Content Include="img\hugo.jpg" />
     <Content Include="img\magalhaes.jpg" />
     <Content Include="img\marquinhos.jpg" />
     <Content Include="img\neymar.jpg" />
     <Content Include="img\raphinha.jpg" />
+    <Content Include="img\richarlison.jpg" />
+    <Content Include="img\vinicius.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
