@@ -18,5 +18,10 @@ namespace Selecao_Brasa_POO
         public Jogadores() { 
         
         }
+
+        public virtual string PosicaoCamp()
+        {
+            return Posicao+" no campo";
+        }
     }
 }

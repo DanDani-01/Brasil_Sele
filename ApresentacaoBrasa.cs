@@ -10,7 +10,7 @@ namespace Selecao_Brasa_POO
 {
     internal class ApresentacaoBrasa : Form
     {
-        Jogadores jogador1 = new Jogadores();
+        Goleiro jogador1 = new Goleiro();
         Jogadores jogador2 = new Jogadores();
         Jogadores jogador3 = new Jogadores();
         Jogadores jogador4 = new Jogadores();
@@ -21,7 +21,7 @@ namespace Selecao_Brasa_POO
         Jogadores jogador9 = new Jogadores();
         Jogadores jogador10 = new Jogadores();
         Jogadores jogador11 = new Jogadores();
-        Jogadores jogador12 = new Jogadores();
+        Goleiro jogador12 = new Goleiro();
 
         PictureBox img = new PictureBox();
         PictureBox img2 = new PictureBox();
@@ -116,17 +116,17 @@ namespace Selecao_Brasa_POO
 
             try
             {
-                // 1. Carrega a imagem em um Bitmap para garantir a manipulação
-                Bitmap bmp = new Bitmap(@"C:\Users\danyb\source\repos\Selecao_Brasa_POO\img\campo.jpg");
+                
+                Bitmap bmp = new Bitmap(@"C:\Users\LabInfo\Source\Repos\Brasil_Sele\img\campo.jpg");
 
-                // 2. Aplica a rotação
+               
                 bmp.RotateFlip(RotateFlipType.Rotate90FlipNone);
 
-                // 3. Configura o PictureBox
+                
                 img.Image = bmp;
                 img.SizeMode = PictureBoxSizeMode.StretchImage;
 
-                // Inverti Width e Height aqui, pois ao girar 90º o que era largura vira altura
+                
                 img.Width = 450;
                 img.Height = 500;
 
@@ -160,33 +160,33 @@ namespace Selecao_Brasa_POO
         private void BtnGol_Click(object sender, EventArgs e)
         {
             jogador1.Nome = "Alisson";
-            jogador1.Posicao = "Goleiro";
+            jogador1.Posicao = "Goleiro" ;
             jogador1.Numero = 1;
             jogador1.Time = "Liverpool";
             jogador1.Idade = 30;
-            jogador12.Nome = "Hugo Lloris";
+            jogador12.Nome = "Hugo Souza";
             jogador12.Posicao = "Goleiro";
             jogador12.Numero = 1;
             jogador12.Time = "Corinthians";
             jogador12.Idade = 37;
 
             lblNom.Text = "Nome: " + jogador1.Nome;
-            lblPos.Text = "Posição: " + jogador1.Posicao;
+            lblPos.Text = jogador1.PosicaoCamp();
             lblNum.Text = "Número: " + jogador1.Numero;
             lblTim.Text = "Time: " + jogador1.Time;
             lblIda.Text = "Idade: " + jogador1.Idade;
             lblNom2.Text = "Nome: " + jogador12.Nome;
-            lblPos2.Text = "Posição: " + jogador12.Posicao;
+            lblPos2.Text = jogador12.PosicaoCamp(); ;
             lblNum2.Text = "Número: " + jogador12.Numero;
             lblTim2.Text = "Time: " + jogador12.Time;
             lblIda2.Text = "Idade: " + jogador12.Idade;
 
 
 
-            img2.Image = Image.FromFile(@"C:\Users\danyb\source\repos\Selecao_Brasa_POO\img\alisson.jpg");
+            img2.Image = Properties.Resources.alisson;
             img2.SizeMode = PictureBoxSizeMode.StretchImage;
             img2.Size = new Size(200, 275);
-            img3.Image = Image.FromFile(@"C:\Users\danyb\Source\Repos\Brasil_Sele\img\hugo.jpg");
+            img3.Image = Properties.Resources.hugo;
             img3.SizeMode = PictureBoxSizeMode.StretchImage;
             img3.Size = new Size(200, 275);
 
@@ -243,22 +243,22 @@ namespace Selecao_Brasa_POO
             jogador3.Idade = 29;
 
             lblNom.Text = "Nome: " + jogador2.Nome;
-            lblPos.Text = "Posição: " + jogador2.Posicao;
+            lblPos.Text = jogador2.PosicaoCamp(); ;
             lblNum.Text = "Número: " + jogador2.Numero;
             lblTim.Text = "Time: " + jogador2.Time;
             lblIda.Text = "Idade: " + jogador2.Idade;
 
             lblNom2.Text = "Nome: " + jogador3.Nome;
-            lblPos2.Text = "Posição: " + jogador3.Posicao;
+            lblPos2.Text = jogador3.PosicaoCamp(); ;
             lblNum2.Text = "Número: " + jogador3.Numero;
             lblTim2.Text = "Time: " + jogador3.Time;
             lblIda2.Text = "Idade: " + jogador3.Idade;
 
-            img2.Image = Image.FromFile(@"C:\Users\danyb\source\repos\Selecao_Brasa_POO\img\marquinhos.jpg");
+            img2.Image = Properties.Resources.marquinhos;
             img2.SizeMode = PictureBoxSizeMode.StretchImage;
             img2.Size = new Size(200, 275);
             this.img2.Location = new Point(550, 120);
-            img3.Image = Image.FromFile(@"C:\Users\danyb\source\repos\Selecao_Brasa_POO\img\magalhaes.jpg");
+            img3.Image = Properties.Resources.magalhaes;
             img3.SizeMode = PictureBoxSizeMode.StretchImage;
             img3.Size = new Size(200, 275);
             this.img3.Location = new Point(850, 120);
@@ -302,31 +302,31 @@ namespace Selecao_Brasa_POO
             jogador4.Nome = "Alex Sandro";
             jogador4.Posicao = "Lateral Esquerdo";
             jogador4.Numero = 6;
-            jogador4.Time = "Juventus";
+            jogador4.Time = "Flamengo";
             jogador4.Idade = 32;
             jogador5.Nome = "Danilo";
             jogador5.Posicao = "Lateral Direito";
             jogador5.Numero = 2;
-            jogador5.Time = "Juventus";
+            jogador5.Time = "Flamengo";
             jogador5.Idade = 32;
 
             lblNom.Text = "Nome: " + jogador4.Nome;
-            lblPos.Text = "Posição: " + jogador4.Posicao;
+            lblPos.Text = jogador4.PosicaoCamp(); ;
             lblNum.Text = "Número: " + jogador4.Numero;
             lblTim.Text = "Time: " + jogador4.Time;
             lblIda.Text = "Idade: " + jogador4.Idade;
 
             lblNom2.Text = "Nome: " + jogador5.Nome;
-            lblPos2.Text = "Posição: " + jogador5.Posicao;
+            lblPos2.Text = jogador5.PosicaoCamp();
             lblNum2.Text = "Número: " + jogador5.Numero;
             lblTim2.Text = "Time: " + jogador5.Time;
             lblIda2.Text = "Idade: " + jogador5.Idade;
 
-            img2.Image = Image.FromFile(@"C:\Users\danyb\source\repos\Selecao_Brasa_POO\img\alex.jpg");
+            img2.Image = Properties.Resources.alex;
             img2.SizeMode = PictureBoxSizeMode.StretchImage;
             img2.Size = new Size(200, 275);
             this.img2.Location = new Point(550, 120);
-            img3.Image = Image.FromFile(@"C:\Users\danyb\source\repos\Selecao_Brasa_POO\img\danilo.jpg");
+            img3.Image = Properties.Resources.danilo;
             img3.SizeMode = PictureBoxSizeMode.StretchImage;
             img3.Size = new Size(200, 275);
             this.img3.Location = new Point(850, 120);
@@ -379,22 +379,22 @@ namespace Selecao_Brasa_POO
             jogador7.Idade = 34;
 
             lblNom.Text = "Nome: " + jogador6.Nome;
-            lblPos.Text = "Posição: " + jogador6.Posicao;
+            lblPos.Text = jogador6.PosicaoCamp();
             lblNum.Text = "Número: " + jogador6.Numero;
             lblTim.Text = "Time: " + jogador6.Time;
             lblIda.Text = "Idade: " + jogador6.Idade;
 
             lblNom2.Text = "Nome: " + jogador7.Nome;
-            lblPos2.Text = "Posição: " + jogador7.Posicao;
+            lblPos2.Text = jogador7.PosicaoCamp();
             lblNum2.Text = "Número: " + jogador7.Numero;
             lblTim2.Text = "Time: " + jogador7.Time;
             lblIda2.Text = "Idade: " + jogador7.Idade;
 
-            img2.Image = Image.FromFile(@"C:\Users\danyb\source\repos\Selecao_Brasa_POO\img\bruno.jpg");
+            img2.Image = Properties.Resources.bruno;
             img2.SizeMode = PictureBoxSizeMode.StretchImage;
             img2.Size = new Size(200, 275);
             this.img2.Location = new Point(550, 120);
-            img3.Image = Image.FromFile(@"C:\Users\danyb\source\repos\Selecao_Brasa_POO\img\casemiro.jpg");
+            img3.Image = Properties.Resources.casemiro;
             img3.SizeMode = PictureBoxSizeMode.StretchImage;
             img3.Size = new Size(200, 275);
             this.img3.Location = new Point(850, 120);
@@ -447,21 +447,22 @@ namespace Selecao_Brasa_POO
             jogador9.Idade = 32;
 
             lblNom.Text = "Nome: " + jogador8.Nome;
-            lblPos.Text = "Posição: " + jogador8.Posicao;
+            lblPos.Text = jogador8.PosicaoCamp();
             lblNum.Text = "Número: " + jogador8.Numero;
             lblTim.Text = "Time: " + jogador8.Time;
             lblIda.Text = "Idade: " + jogador8.Idade;
+
             lblNom2.Text = "Nome: " + jogador9.Nome;
-            lblPos2.Text = "Posição: " + jogador9.Posicao;
+            lblPos2.Text = jogador9.PosicaoCamp();
             lblNum2.Text = "Número: " + jogador9.Numero;
             lblTim2.Text = "Time: " + jogador9.Time;
             lblIda2.Text = "Idade: " + jogador9.Idade;
 
-            img2.Image = Image.FromFile(@"C:\Users\danyb\source\repos\Selecao_Brasa_POO\img\raphinha.jpg");
+            img2.Image = Properties.Resources.raphinha;
             img2.SizeMode = PictureBoxSizeMode.StretchImage;
             img2.Size = new Size(200, 275);
             this.img2.Location = new Point(550, 120);
-            img3.Image = Image.FromFile(@"C:\Users\danyb\source\repos\Selecao_Brasa_POO\img\neymar.jpg");
+            img3.Image = Properties.Resources.neymar;
             img3.SizeMode = PictureBoxSizeMode.StretchImage;
             img3.Size = new Size(200, 275);
             this.img3.Location = new Point(850, 120);
@@ -515,21 +516,22 @@ namespace Selecao_Brasa_POO
             jogador11.Idade = 28;
 
             lblNom.Text = "Nome: " + jogador10.Nome;
-            lblPos.Text = "Posição: " + jogador10.Posicao;
+            lblPos.Text = jogador10.PosicaoCamp();
             lblNum.Text = "Número: " + jogador10.Numero;
             lblTim.Text = "Time: " + jogador10.Time;
             lblIda.Text = "Idade: " + jogador10.Idade;
+
             lblNom2.Text = "Nome: " + jogador11.Nome;
-            lblPos2.Text = "Posição: " + jogador11.Posicao;
+            lblPos2.Text = jogador11.PosicaoCamp();
             lblNum2.Text = "Número: " + jogador11.Numero;
             lblTim2.Text = "Time: " + jogador11.Time;
             lblIda2.Text = "Idade: " + jogador11.Idade;
 
-            img2.Image = Image.FromFile(@"C:\Users\danyb\Source\Repos\Brasil_Sele\img\richarlison.jpg");
+            img2.Image = Properties.Resources.richarlison;
             img2.SizeMode = PictureBoxSizeMode.StretchImage;
             img2.Size = new Size(200, 275);
             this.img2.Location = new Point(550, 120);
-            img3.Image = Image.FromFile(@"C:\Users\danyb\Source\Repos\Brasil_Sele\img\vinicius.jpg");
+            img3.Image = Properties.Resources.vinicius;
             img3.SizeMode = PictureBoxSizeMode.StretchImage;
             img3.Size = new Size(200, 275);
             this.img3.Location = new Point(850, 120);
